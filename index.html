@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- HEADER Section -->
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form onsubmit="return false" class="input-block">
+        <input class="input-ip" type="text" placeholder="Search for any IP address or domain">
+        <button class="submit-btn"><img src="./images/icon-arrow.svg" alt="">
+        </button>
+      </form>
+    </header>
+    <!-- RESULT Section -->
+    <div class="result-container">
+      <div class="box-1">
+        <p class="inner-header">IP ADDRESS</p>
+        <h3 class="ip-address inner-result">-</h3>
+      </div>
+      <div class="box-2">
+        <p class="inner-header">LOCATION</p>
+        <h3 class="location-ip inner-result">-</h3>
+      </div>
+      <div class="box-3">
+        <p class="inner-header">TIMEZONE</p>
+        <h3 class="time-zone inner-result">-</h3>
+      </div>
+      <div class="box-4">
+        <p class="inner-header">ISP</p>
+        <h3 class="isp-ip inner-result">-</h3>
+      </div>
+    </div>
+    <!-- MAP Section -->
+    <div class="map-section" id="map"></div>
+  </div>
+
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAylfsMtjE6KYhczfoVUmz1pOuWb0G4Cc&callback=initMap" async
+    defer>
+    </script>
+
+  <script src="map.js"></script>
+</body>
+
+</html>
